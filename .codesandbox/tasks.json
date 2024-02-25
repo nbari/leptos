@@ -3,7 +3,7 @@
   "tasks": {
     "tailwind": {
       "name": "tailwind",
-      "command": "npx tailwindcss -i input.css -o ./public/style.css",
+      "command": "npx tailwindcss -i inputs.css -o ./public/style.css",
       "runAtStart": true
     },
     "trunk serve": {
