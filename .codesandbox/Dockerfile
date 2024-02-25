@@ -12,7 +12,7 @@ RUN apt-get update && \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | \
     sh -s -- --default-toolchain nightly --target wasm32-unknown-unknown -y
 
-ENV PATH=/root/.cargo/bin:$PATH 
+ENV PATH=/root/.cargo/bin:$PATH
 
 # install cargo binstall to reduce image size
 WORKDIR /root/.cargo/bin
@@ -23,5 +23,9 @@ RUN curl -L --output cargo-binstall.tgz https://github.com/cargo-bins/cargo-bins
 
 #RUN rustup component add rust-analyzer rustfmt rust-src clippy
 RUN cargo binstall trunk@0.16.0 -y
+
+# Node.js
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt install nodejs -y
 
 WORKDIR /root
