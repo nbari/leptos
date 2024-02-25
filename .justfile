@@ -1,4 +1,7 @@
-run: tailwindcss
+run:
+  just dev & just watch
+
+dev:
   trunk serve --open
 
 build: tailwindcss
