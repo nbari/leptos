@@ -22,7 +22,7 @@ RUN curl -L --output cargo-binstall.tgz https://github.com/cargo-bins/cargo-bins
     rm cargo-binstall.tgz
 
 #RUN rustup component add rust-analyzer rustfmt rust-src clippy
-RUN cargo binstall trunk@0.16.0 -y
+RUN cargo binstall trunk@0.18.8 -y
 
 # Node.js
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
